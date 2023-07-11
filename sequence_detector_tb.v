@@ -19,5 +19,6 @@ module sequence_detector_tb;
     #5 din=1;
   end
   always #5 clk = ~clk;
+  initial $monitor("time = %g,clk = %b,y = %b, rst = %b, din = %b",$time, clk, y, rst, din);
   initial #100 $finish;
 endmodule
